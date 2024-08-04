@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root
+{
+    --background-color: #31363F;
+    --nav-color: #222831;
+    --text-color: #EEEEEE;
+    --hover-color: #181d24;
+
+}
+
+.background
+{
+    background-color: var(--background-color);
+}
+
+header nav ul
+{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    background-color: var(--nav-color);
+    height: 5vh;
+    padding-left: 2vw;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 15px;
+}
+
+header nav ul li a
+{
+    display: block;
+    text-decoration: none;
+    background-color: var(--nav-color);
+    height: 5vh;
+    color: var(--text-color);
+    padding-top: 1vh;
+    width: 15vw;
+    text-align: center;
+    transition: .25s;
+}
+
+header nav ul li a:hover
+{
+    background-color: var(--hover-color);
+}
+
+.content
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 7.5vh;
+    left: 2vw;
+    height: 100%;
+    width: 98%;
+}
+
+.card
+{
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid var(--text-color);
+    width: 450px;
+    height: 500px;
+    transition: .25s;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vw;
+    overflow: hidden;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.card-row
+{
+    display: flex;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+
+.card-header
+{
+    text-align: center;
+    color: var(--text-color);
+    width: 50%;
+    text-decoration: underline;
+}
+
+.card-created
+{
+    color: var(--text-color);
+    text-align: right;
+    font-size: 0.75rem;
+}
+
+.card-text
+{
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-top: 1vh;
+}
+
+.form
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4vh;
+}
+
+.btn
+{
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn:hover
+{
+    background-color: var(--hover-color);
+}
+
+.post-note
+{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+    border-radius: 15px;
+    border: 1px solid #EEEEEE;
+    width: 50vw;
+    height: 50vh;
+    overflow: hidden;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+label
+{
+    margin-top: 1vh;
+}
+
+.note-name
+{
+    width: 95%;
+    font-size: 1.25rem;
+}
+
+.note-text
+{
+    height: 50vh;
+    width: 95%;
+    font-size: 1rem;
+}
+
+input, textarea:not(.form)
+{
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+.btn-submit
+{
+    background-color: var(--text-color);
+    color: var(--hover-color);
+    width: 30%;
+    border-radius: 15px;
+    border: none;
+    height: 5vh;
+    cursor: pointer;
+    transition: .25s;
+    margin: 0 auto;
+    margin-top: 1vh;
+}
+
+.btn-submit:hover
+{
+    color: var(--text-color);
+    background-color: var(--hover-color);
+}
+
+.btn-copy
+{
+    margin: 0 auto;
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    transition: .25s;
+    height: 10%;
+    width: 30%;
+    margin-left: 2.5%;
+}
+
+.btn-copy:hover
+{
+    color: var(--hover-color);
+    background-color: var(--text-color);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) 
+{
+    header nav ul
+{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    background-color: var(--nav-color);
+    height: 10vh;
+    padding-left: 2vw;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 15px;
+}
+
+header nav ul li a
+{
+    display: block;
+    text-decoration: none;
+    background-color: var(--nav-color);
+    height: 10vh;
+    color: var(--text-color);
+    padding-top: 4vh;
+    width: 50vw;
+    text-align: center;
+    transition: .25s;
+    font-size: 1rem;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    top: 10vh;
+    left: 2vw;
+    height: 100%;
+    width: 100%;
+}
+
+.card
+{
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid var(--text-color);
+    width: 300px;
+    height: 500px;
+    transition: .25s;
+    margin: 0 auto;
+    margin-top: 4vh;
+    overflow: hidden;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.card-header
+{
+    text-align: center;
+    color: var(--text-color);
+    width: 100%;
+    text-decoration: underline;
+}
+
+.card-created
+{
+    color: var(--text-color);
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.card-text
+{
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-top: 1vh;
+}
+
+.form
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7.5vh;
+}
+
+.btn
+{
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn:hover
+{
+    background-color: var(--hover-color);
+}
+
+.post-note
+{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 5vh;
+    border-radius: 15px;
+    border: 1px solid #EEEEEE;
+    width: 90%;
+    height: 50vh;
+    overflow: hidden;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+label
+{
+    margin-top: 1vh;
+}
+
+.note-name
+{
+    margin: 0 auto;
+    width: 95%;
+    font-size: 1.1rem;
+}
+
+.note-text
+{
+    margin: 0 auto;
+    height: 50vh;
+    width: 95%;
+    font-size: 1rem;
+}
+
+input, textarea
+{
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+label
+{
+    margin-left: 2.5%;
+}
+
+.btn-submit
+{
+    background-color: var(--text-color);
+    color: var(--hover-color);
+    width: 70%;
+    border: none;
+    height: 5vh;
+    cursor: pointer;
+    transition: .25s;
+    margin: 0 auto;
+    margin-top: 1vh;
+}
+
+.btn-copy
+{
+    margin: 0 auto;
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    transition: .25s;
+    height: 10%;
+    width: 70%;
+    margin-left: 2.5%;
+}
+}
